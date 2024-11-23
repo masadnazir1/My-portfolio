@@ -4,7 +4,7 @@ import asad from "../assets/asad.png";
 import fb from "../assets/facebook.png";
 import linkedin from "../assets/linkden.png";
 import github from "../assets/github.png";
-import whatapp from "../assets/whatsapp.png";
+import whatsapp from "../assets/whatsapp.png";
 import laptop from "../assets/laptop.png";
 
 const HeroSection = () => {
@@ -15,7 +15,6 @@ const HeroSection = () => {
           src={asad}
           width={100}
           height={100}
-          // Add your profile image in the `public` folder
           alt="Profile Picture"
           className={styles.profileImage}
         />
@@ -31,80 +30,80 @@ const HeroSection = () => {
           </p>
 
           <div className={styles.socialLinks}>
-            <div style={styles.socialIcons}>
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/@masadnazir10"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcons}
+            >
               <Image
                 src={fb}
-                alt="facebook"
+                alt="Facebook"
                 width={40}
                 height={40}
-                style={styles.icon}
+                className={styles.icon}
               />
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* Facebook */}
-              </a>
-            </div>
-            <div style={styles.socialIcons}>
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/masadnazir10/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcons}
+            >
               <Image
                 src={linkedin}
-                alt="facebook"
+                alt="LinkedIn"
                 width={40}
                 height={40}
-                style={styles.icon}
+                className={styles.icon}
               />
+            </a>
 
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* LinkedIn */}
-              </a>
-            </div>
-            <div style={styles.socialIcons}>
+            {/* GitHub */}
+            <a
+              href="https://github.com/masadnazir1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcons}
+            >
               <Image
                 src={github}
-                alt="facebook"
+                alt="GitHub"
                 width={40}
                 height={40}
-                style={styles.icon}
+                className={styles.icon}
               />
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* GitHub */}
-              </a>
-            </div>
-            <div style={styles.socialIcons}>
+            </a>
+
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/+923208648637"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialIcons}
+            >
               <Image
-                src={whatapp}
-                alt="facebook"
+                src={whatsapp}
+                alt="WhatsApp"
                 width={40}
                 height={40}
-                style={styles.icon}
+                className={styles.icon}
               />
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* GitHub */}
-              </a>
-            </div>
+            </a>
           </div>
         </div>
       </div>
+
+      {/* Hero Section Image */}
       <div className={styles.heroimage}>
         <Image
           src={laptop}
           width={300}
           height={300}
-          alt="laptop"
+          alt="Laptop"
           className={styles.heroSectionimage}
         />
       </div>
