@@ -1,7 +1,14 @@
 import React from "react";
 import styles from "../styles/Soon.module.css";
 import node from "../assets/node.png";
+import express from "../assets/express.png";
+import js from "../assets/js.png";
+import pg from "../assets/pg.png";
+
+//ws.png
+import ws from "../assets/ws.png";
 import Image from "next/image";
+//pg.png
 import { FaGamepad, FaUserEdit, FaTrophy, FaSearch } from "react-icons/fa"; // Importing icons for a better visual
 
 const Soon = () => {
@@ -60,19 +67,19 @@ const Soon = () => {
               Node.js
             </div>
             <div className={styles.box}>
-              <Image src={node} alt="" width={100} height={100} />
+              <Image src={express} alt="" width={100} height={100} />
               Express.js
             </div>
             <div className={styles.box}>
-              <Image src={node} alt="" width={100} height={100} />
+              <Image src={js} alt="" width={100} height={100} />
               JavaScript
             </div>
             <div className={styles.box}>
-              <Image src={node} alt="" width={100} height={100} />
+              <Image src={pg} alt="" width={100} height={100} />
               PostgreSQL
             </div>
             <div className={styles.box}>
-              <Image src={node} alt="" width={100} height={100} />
+              <Image src={ws} alt="" width={100} height={100} />
               WebSocket (WS) for real-time updates
             </div>
           </section>

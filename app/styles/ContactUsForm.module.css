@@ -32,7 +32,7 @@
 .formContainer {
   max-width: 600px;
   width: 100%;
-  background: #fff;
+  /* background: #fff; */
   padding: 30px;
   border-radius: 8px;
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
@@ -67,7 +67,7 @@
   margin-bottom: 8px;
   font-size: 15px;
   color: #333;
-  background-color: #ffffff;
+  background-color: #f1faee;
   width: 17%;
   position: relative;
   top: 15px;
@@ -79,7 +79,7 @@
   margin-bottom: 8px;
   font-size: 15px;
   color: #333;
-  background-color: #ffffff;
+  background-color: #f1faee;
   width: 25%;
   position: relative;
   top: 15px;
