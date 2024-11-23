@@ -22,11 +22,12 @@ const HeroSection = () => {
         <div className={styles.heroContent}>
           <h1>Software Developer, React JS, TypeScript</h1>
           <p>
-            I am a passionate and dedicated software developer with a strong
-            foundation in React JS, TypeScript, and Node.js. I have experience
-            working with various teams and projects. I am currently available
-            for freelance opportunities or consulting projects. Feel free to
-            reach out if you would like to discuss a project or hire me!
+            am a passionate and dedicated Frontend Developer with a strong
+            foundation in React.js, WordPress, and Node.js. I have experience
+            collaborating with diverse teams and contributing to various
+            projects. I am currently available for freelance opportunities and
+            consulting projects. Feel free to reach out to discuss your project
+            or explore how I can help!
           </p>
 
           <div className={styles.socialLinks}>

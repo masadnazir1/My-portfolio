@@ -110,16 +110,18 @@
   margin-bottom: 20px;
 }
 
-.menuModal ul li a {
+.menuModal ul li p {
   font-size: 1.5rem;
-  color: #ffd700;
+  cursor: pointer;
+  color: #ffffff;
   text-decoration: none;
+  text-align: center;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.menuModal ul li a:hover {
-  color: #fff;
+.menuModal ul li p:hover {
+  color: #ffd700;
 }
 
 /* Animation */
@@ -162,4 +164,14 @@
 
 .contactbtn:hover {
   background-color: #375074;
+}
+
+.contactbtnmobile {
+  padding: 10px 20px;
+  background-color: #1d3557;
+  border: 1px solid #fff;
+  color: #fff !important;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration-color: #fff;
 }

@@ -39,15 +39,16 @@ const Header = ({ onNavigate }) => {
           <li onClick={() => handleNavigation("hero")}>
             <p>Home</p>
           </li>
+          <li onClick={() => handleNavigation("experience")}>
+            <p>Skills</p>
+          </li>
           <li onClick={() => handleNavigation("portfolio")}>
             <p>Projects</p>
           </li>
           <li onClick={() => handleNavigation("backendfolio")}>
             <p> Backend Projects</p>
           </li>
-          <li onClick={() => handleNavigation("experience")}>
-            <p>Skills</p>
-          </li>
+
           <li onClick={() => handleNavigation("contact")}>
             <p className={styles.contactbtn}>Contact</p>
           </li>
@@ -69,13 +70,20 @@ const Header = ({ onNavigate }) => {
             <li onClick={() => handleNavigation("hero")}>
               <p>Home</p>
             </li>
-            <li onClick={() => handleNavigation("portfolio")}>
-              <p>Projects</p>
-            </li>
             <li onClick={() => handleNavigation("experience")}>
               <p>Skills</p>
             </li>
-            <li onClick={() => handleNavigation("contact")}>
+            <li onClick={() => handleNavigation("portfolio")}>
+              <p>Projects</p>
+            </li>
+            <li onClick={() => handleNavigation("backendfolio")}>
+              <p> Backend Projects</p>
+            </li>
+
+            <li
+              onClick={() => handleNavigation("contact")}
+              className={styles.contactbtnmobile}
+            >
               <p>Contact</p>
             </li>
           </ul>

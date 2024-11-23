@@ -22,8 +22,8 @@
 
 .backendfolio .title {
   text-align: left;
-  font-size: 2.5rem;
-  color: #333;
+
+  color: #000;
   margin-bottom: 10px;
 }
 
@@ -100,4 +100,28 @@
 
 .projectLink:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 786px) {
+  .clipath {
+  }
+
+  .backendfolio .title {
+    text-align: left;
+
+    color: #333;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clipath {
+  }
+
+  .backendfolio .title {
+    text-align: left;
+    font-size: 5px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
 }
