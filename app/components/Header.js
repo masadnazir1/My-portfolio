@@ -43,7 +43,7 @@ const Header = ({ onNavigate }) => {
             <p>Skills</p>
           </li>
           <li onClick={() => handleNavigation("portfolio")}>
-            <p>Projects</p>
+            <p>Frontend Projects</p>
           </li>
           <li onClick={() => handleNavigation("backendfolio")}>
             <p> Backend Projects</p>
@@ -74,7 +74,7 @@ const Header = ({ onNavigate }) => {
               <p>Skills</p>
             </li>
             <li onClick={() => handleNavigation("portfolio")}>
-              <p>Projects</p>
+              <p> Frontend Projects</p>
             </li>
             <li onClick={() => handleNavigation("backendfolio")}>
               <p> Backend Projects</p>
