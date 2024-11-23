@@ -1,0 +1,70 @@
+/* Section Styling */
+.experienceSection {
+  text-align: center;
+  padding: 40px;
+  /* background: linear-gradient(to bottom, #10141c, #f9b30c); */
+  color: #fff;
+  background-color: #f1faee;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-top: 20px;
+}
+
+/* Heading */
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: black;
+  text-align: left;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+
+  color: black;
+  text-align: left;
+}
+
+/* Grid Layout */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 55px;
+
+  justify-items: center;
+}
+
+/* Skill Card */
+.skillCard {
+  margin: 10px;
+  width: 200px;
+  height: auto;
+  background-color: #fff;
+  /* background: rgba(255, 255, 255, 0.1); */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.079);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Icon Styling */
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Skill Name */
+.skillName {
+  font-size: 1.1rem;
+  color: #000000;
+}

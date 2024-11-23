@@ -1,0 +1,162 @@
+/* General styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 5px 3px 20px 12px #0501010d;
+  color: #000000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.name {
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: wavy;
+}
+
+.closebtn {
+  background-color: #ff6d6d;
+  padding: 30px;
+  border: none;
+  position: fixed;
+  top: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.closebtn:hover {
+  background-color: #ffffff;
+  color: black;
+  transition: 1ms ease-in-out;
+}
+
+.logoimage {
+  border-radius: 100px;
+  border: 2px solid #000000;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav ul li p {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Mobile Menu Icon */
+.menuIcon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Menu Modal */
+.menuModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: slideIn 0.5s ease;
+}
+
+.menuModal ul {
+  list-style: none;
+  text-align: center;
+  /* background: #333; */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.menuModal ul li {
+  margin-bottom: 20px;
+}
+
+.menuModal ul li a {
+  font-size: 1.5rem;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menuModal ul li a:hover {
+  color: #fff;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .menuIcon:hover {
+    color: #ffd700;
+  }
+
+  .nav.active {
+    display: block;
+  }
+}
+
+.contactbtn {
+  padding: 10px 20px;
+  background-color: #1d3557;
+  color: #fff !important;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration-color: #fff;
+}
+
+.contactbtn:hover {
+  background-color: #375074;
+}

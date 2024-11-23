@@ -1,0 +1,110 @@
+/* Global Styles for the Hero Section */
+.heroSection {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* height: 100vh; */
+  background-color: #f1faee;
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.heroimage {
+  display: flex;
+  width: 30%;
+  padding: 10px;
+}
+.heroSectionimage {
+  width: 90%;
+  height: 90%;
+}
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: left;
+  /* max-width: 800px; */
+  padding: 20px;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ffc107; /* Golden border */
+  margin-bottom: 20px;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: black;
+}
+.socialLinks {
+  display: flex;
+  flex-direction: row;
+}
+.socialLinks a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.icon {
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+}
+
+.socialLinks a:hover {
+  color: #ffc107; /* Golden color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroimage {
+    display: none;
+  }
+  .heroContainer {
+    width: 100%;
+  }
+  .heroContent h1 {
+    font-size: 1.8rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .profileImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .socialLinks a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 1.4rem;
+  }
+
+  .heroContent p {
+    font-size: 0.9rem;
+  }
+}

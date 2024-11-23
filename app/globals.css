@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #f1faee;
   --foreground: #171717;
 }
 
@@ -39,4 +39,38 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #fff, #fff); /* Track background */
+  border-radius: 10px; /* Rounded edges */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    45deg,
+    #457b9d,
+    #457b9d
+  ); /* Thumb with gradient */
+  border-radius: 6px; /* Rounded edges */
+  border: 0px solid #292929; /* Add border for a 3D effect */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff9c00, #e91e63); /* Hover effect */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Glow on hover */
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(45deg, #ff4d4d, #f9b30c); /* Active state */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Stronger glow when active */
+}
+
+body::-webkit-scrollbar-corner {
+  background: #665656; /* Corner when both vertical and horizontal scrollbars are visible */
 }
