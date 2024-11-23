@@ -147,6 +147,12 @@
 }
 
 @media (max-width: 480px) {
+  .labeltextarea {
+    width: 35%;
+  }
+  .label {
+    width: 30%;
+  }
   .boxinternal {
     flex-direction: column;
   }
@@ -169,5 +175,11 @@
 
   .submitButton {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .label {
+    width: 30%;
   }
 }

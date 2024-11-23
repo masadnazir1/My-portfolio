@@ -7,7 +7,7 @@
 
 .clipath {
   background-color: #ccd5ae;
-  padding: 5px;
+  padding: 20px;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
@@ -22,7 +22,7 @@
 
 .backendfolio .title {
   text-align: left;
-
+  font-size: 10px;
   color: #000;
   margin-bottom: 10px;
 }
@@ -53,11 +53,9 @@
 }
 
 .projectTitle {
-  font-size: 1.8rem;
   font-weight: bold;
   color: #333;
   text-align: left;
-  margin-bottom: 10px;
 }
 
 .projectDescription {

@@ -16,7 +16,7 @@ const Backendfolio = () => {
       title: "BlogBook Backend",
       description:
         "A fully functional backend built with Node.js and Express for BlogBook to create, post, delete blogs, and manage the user profile section, such as uploading pictures, changing the cover photo, and updating names and other details. It also allows users to share posts, comment on posts, convert pictures to binary, and decode them into image URLs. PostgreSQL is used for the database, with Node.js and Express as the framework.",
-      techStack: ["Node.js", "Express", "MongoDB"],
+      techStack: ["Node.js", "Express", "Postgresql"],
       link: "https://github.com/yourusername/e-commerce-api",
     },
     {
@@ -30,14 +30,14 @@ const Backendfolio = () => {
       title: "Email sending api",
       description:
         "A fully functional API for sending emails, such as OTPs, order information, and other similar automations, built using the Express.js framework and hosted on Vercel. It uses Gmail SMTP for sending the emails.",
-      techStack: ["Node.js", "Twilio", "Express"],
+      techStack: ["Node.js", "Gmail", "Express"],
       link: "https://github.com/yourusername/sms-marketing-app",
     },
     {
       title: "Daily stats Automation",
       description:
         "An Express.js and Node.js automation script to read yesterday's data from the database, calculate it, and send the stats via email to the team daily at 8 AM. I have used Node Cron for scheduling the task, and PostgreSQL is used for the database.",
-      techStack: ["Node.js", "Express", "OpenWeatherMap API"],
+      techStack: ["Node.js", "Express", "Postgresql"],
       link: "https://github.com/yourusername/weather-forecast-api",
     },
     {

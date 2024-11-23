@@ -20,9 +20,9 @@ const HeroSection = () => {
         />
 
         <div className={styles.heroContent}>
-          <h1>Software Developer, React JS, TypeScript</h1>
+          <h1>Frontend Developer, React JS, TypeScript</h1>
           <p>
-            am a passionate and dedicated Frontend Developer with a strong
+            I am a passionate and dedicated Frontend Developer with a strong
             foundation in React.js, WordPress, and Node.js. I have experience
             collaborating with diverse teams and contributing to various
             projects. I am currently available for freelance opportunities and
