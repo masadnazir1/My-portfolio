@@ -36,7 +36,7 @@ const ContactUsForm = () => {
     try {
       setLoading(true);
 
-      await axios.post("https://api.emailsend.digihut.store/send-email/", {
+      await axios.post("https://api-email.galaxydev.pk/send-email/", {
         to: adminemail,
         subject: `Message from ${name}, ${email}`,
         text: message,
