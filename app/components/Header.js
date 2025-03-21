@@ -50,7 +50,7 @@ const Header = ({ onNavigate }) => {
           </li>
 
           <li onClick={() => handleNavigation("contact")}>
-            <p className={styles.contactbtn}>Contact</p>
+            <p className={styles.contactbtn}>Contact Us</p>
           </li>
         </ul>
       </nav>
@@ -84,7 +84,7 @@ const Header = ({ onNavigate }) => {
               onClick={() => handleNavigation("contact")}
               className={styles.contactbtnmobile}
             >
-              <p>Contact</p>
+              <p>Contact Us</p>
             </li>
           </ul>
         </div>

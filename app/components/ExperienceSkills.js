@@ -10,9 +10,6 @@ import github from "../assets/github.png";
 import wordpress from "../assets/wordpress.png";
 import git from "../assets/git.png";
 import expressjs from "../assets/express.png";
-//node.png
-import node from "../assets/node.png";
-import docker from "../assets/docker.png";
 import linux from "../assets/linux.png";
 
 const skills = [
@@ -24,9 +21,7 @@ const skills = [
   { id: 6, name: "GitHub", icon: github },
   { id: 7, name: "Wordpress", icon: wordpress },
   { id: 8, name: "git", icon: git },
-  { id: 9, name: "node js", icon: node },
   { id: 10, name: "Express Js", icon: expressjs },
-  { id: 11, name: "Docker", icon: docker },
   //linux
   { id: 12, name: "Linux ", icon: linux },
 ];

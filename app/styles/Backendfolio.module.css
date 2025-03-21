@@ -1,12 +1,16 @@
 /* General Styles */
 .backendfolio {
   padding: 50px;
-
+  background-color: #f1faee;
   width: 100%;
 }
 
 .clipath {
-  background-color: #ccd5ae;
+  background: linear-gradient(
+    135deg,
+    rgba(167, 170, 255, 0.64),
+    rgba(219, 153, 191, 0.489)
+  );
   padding: 20px;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -22,7 +26,7 @@
 
 .backendfolio .title {
   text-align: left;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #000;
   margin-bottom: 10px;
 }
@@ -43,7 +47,11 @@
 
 /* Project Card */
 .projectCard {
-  background-color: #fff;
+  background: linear-gradient(
+    135deg,
+    rgba(167, 170, 255, 0.64),
+    rgba(219, 153, 191, 0.489)
+  );
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 25px;
@@ -55,14 +63,14 @@
 .projectTitle {
   font-weight: bold;
   color: #333;
+  font-size: 2rem;
   text-align: left;
 }
 
 .projectDescription {
-  font-size: 1rem;
-  color: #555;
+  color: #1c0505;
   text-align: left;
-
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -75,29 +83,40 @@
 }
 
 .techItem {
-  background-color: #a8dadc;
+  background: linear-gradient(
+    135deg,
+    rgba(78, 82, 186, 0.64),
+    rgba(195, 65, 141, 0.773)
+  );
   color: #000;
-  padding: 8px 16px;
+  padding: 8px 20px;
   border-radius: 20px;
   font-size: 0.9rem;
 }
 
 .projectLink {
-  background-color: #1d3557;
+  background: linear-gradient(
+    135deg,
+    rgba(115, 105, 205, 0.963),
+    rgb(99, 255, 237)
+  );
   color: #fff;
-  padding: 15px 20px;
+  padding: 10px 30px;
   display: flex;
   justify-self: left;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 500px;
   font-weight: bold;
   cursor: pointer;
   display: inline-block;
   transition: background-color 0.3s ease;
-}
-
-.projectLink:hover {
-  background-color: #0056b3;
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(115, 105, 205, 0.963),
+      rgb(99, 255, 237)
+    );
+  }
 }
 
 @media (max-width: 786px) {

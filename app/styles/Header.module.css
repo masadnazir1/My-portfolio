@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   background-color: #fff;
-  box-shadow: 5px 3px 20px 12px #0501010d;
+  box-shadow: 5px 3px 5px 1px #0501010d;
   color: #000000;
   position: fixed;
   width: 100%;
@@ -67,7 +67,7 @@
   color: #000000;
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-top: 10px;
   transition: color 0.3s;
@@ -113,15 +113,30 @@
 .menuModal ul li p {
   font-size: 1.5rem;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   text-align: center;
   font-weight: bold;
   transition: color 0.3s;
 }
 
+.menuModal ul li p {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    rgba(167, 170, 255, 0.8),
+    rgba(219, 153, 191, 0.8)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.3s ease;
+}
+
 .menuModal ul li p:hover {
-  color: #ffd700;
+  background: linear-gradient(135deg, #ffd700, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Animation */
@@ -155,22 +170,35 @@
 
 .contactbtn {
   padding: 10px 20px;
-  background-color: #1d3557;
+  background: linear-gradient(
+    135deg,
+    rgba(115, 105, 205, 0.963),
+    rgb(99, 255, 237)
+  );
   color: #fff !important;
   border-radius: 50px;
   cursor: pointer;
   text-decoration-color: #fff;
-}
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(146, 137, 228, 0.963),
+      rgb(161, 255, 244)
+    );
 
-.contactbtn:hover {
-  background-color: #375074;
+    box-sizing: border-box;
+  }
 }
 
 .contactbtnmobile {
   padding: 10px 20px;
-  background-color: #1d3557;
+  background: linear-gradient(
+    135deg,
+    rgba(115, 105, 205, 0.963),
+    rgb(99, 255, 237)
+  );
   border: 1px solid #fff;
-  color: #fff !important;
+  color: #000 !important;
   border-radius: 50px;
   cursor: pointer;
   text-decoration-color: #fff;

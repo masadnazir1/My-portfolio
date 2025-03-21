@@ -30,23 +30,6 @@ const projects = [
     link: "https://dblob.digihut.store/",
   },
   // {
-  //   id: 4,
-  //   title: "Grocery Store",
-  //   image: "/grocery.png",
-  //   link: "https://grocerystore.com",
-  // },
-  // {
-  //   id: 5,
-  //   title: "Spotify Clone",
-  //   image: "/spotify.png",
-  //   link: "https://spotifyclone.com",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Weather App",
-  //   image: "/weather.png",
-  //   link: "https://weatherapp.com",
-  // },
 ];
 
 const Portfolio = () => {

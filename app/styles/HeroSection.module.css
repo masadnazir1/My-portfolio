@@ -12,6 +12,20 @@
   border-bottom-right-radius: 30px;
 }
 
+.ImageSection {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.ImageSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: rgb(91, 51, 160);
+  font-weight: bold;
+}
+
 .heroimage {
   display: flex;
   width: 30%;
@@ -46,7 +60,8 @@
 }
 
 .heroContent p {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
   line-height: 1.6;
   margin-bottom: 30px;
   color: black;
@@ -88,11 +103,19 @@
 
   .heroContent p {
     font-size: 1rem;
+    font-weight: 400;
   }
 
   .profileImage {
-    width: 120px;
-    height: 120px;
+    width: 30%;
+    height: 30%;
+  }
+
+  .ImageSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: rgb(91, 51, 160);
+    font-weight: bold;
   }
 
   .socialLinks a {
@@ -102,10 +125,32 @@
 
 @media (max-width: 480px) {
   .heroContent h1 {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .heroContent p {
     font-size: 0.9rem;
+  }
+}
+
+.Download {
+  background: linear-gradient(
+    135deg,
+    rgba(115, 105, 205, 0.963),
+    rgb(99, 255, 237)
+  );
+  padding: 15px 40px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-radius: 1000px;
+  border: none;
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(66, 56, 159, 0.963),
+      rgb(31, 152, 138)
+    );
   }
 }

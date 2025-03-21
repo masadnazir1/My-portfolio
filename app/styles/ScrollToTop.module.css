@@ -2,7 +2,11 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #1d3557;
+  background: linear-gradient(
+    135deg,
+    rgba(115, 105, 205, 0.963),
+    rgb(99, 255, 237)
+  );
   border-radius: 50%;
   width: 45px;
   height: 45px;

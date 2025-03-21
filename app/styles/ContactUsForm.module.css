@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  background-color: #f1faee;
   min-height: 100vh;
 }
 .boxinternal {
@@ -42,6 +42,7 @@
 .heading {
   font-size: 2rem;
   margin-bottom: 10px;
+  text-align: center;
   color: #000000;
 }
 
@@ -49,6 +50,7 @@
   font-size: 1rem;
   margin-bottom: 20px;
   color: #555;
+  text-align: center;
 }
 
 /* Contact Form */
@@ -109,7 +111,11 @@
 
 /* Submit Button */
 .submitButton {
-  background-color: #000000;
+  background: linear-gradient(
+    135deg,
+    rgba(115, 105, 205, 0.963),
+    rgb(87, 212, 197)
+  );
   color: #fff;
   border: none;
   padding: 12px;
@@ -120,7 +126,12 @@
 }
 
 .submitButton:hover {
-  background-color: #3b3535;
+  background: linear-gradient(
+    135deg,
+    rgba(146, 137, 228, 0.963),
+    rgb(161, 255, 244)
+  );
+  border: 0.5px solid #000;
 }
 
 /* Responsive Design */

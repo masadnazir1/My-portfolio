@@ -5,34 +5,36 @@ import fb from "../assets/facebook.png";
 import linkedin from "../assets/linkden.png";
 import github from "../assets/github.png";
 import whatsapp from "../assets/whatsapp.png";
-import laptop from "../assets/laptop.png";
+import laptop from "../assets/3d_project.png";
 
 const HeroSection = () => {
   return (
     <div className={styles.heroSection}>
       <div className={styles.heroContainer}>
-        <Image
-          src={asad}
-          width={100}
-          height={100}
-          alt="Profile Picture"
-          className={styles.profileImage}
-        />
+        <div className={styles.ImageSection}>
+          <Image
+            src={asad}
+            width={100}
+            height={100}
+            alt="Profile Picture"
+            className={styles.profileImage}
+          />
+          <h2>M Asad Nazir</h2>
+        </div>
 
         <div className={styles.heroContent}>
-          <h1>Frontend Developer, React JS, TypeScript</h1>
+          <h1>Frontend Developer | React.js | WordPress | Node.js</h1>
           <p>
-            I am a passionate and dedicated Frontend Developer with a strong
-            foundation in React.js, WordPress, and Node.js. I have experience
-            collaborating with diverse teams and contributing to various
-            projects. I am currently available for freelance opportunities and
-            consulting projects. Feel free to reach out to discuss your project
-            or explore how I can help!
+            Passionate about crafting seamless user experiences. I thrive in
+            team collaborations and diverse projects. Available for freelance &
+            consulting—let’s build something great together!
           </p>
+
+          <button className={styles.Download}>Download CV</button>
 
           <div className={styles.socialLinks}>
             {/* Facebook */}
-            <a
+            {/* <a
               href="https://www.facebook.com/@masadnazir10"
               target="_blank"
               rel="noopener noreferrer"
@@ -45,10 +47,10 @@ const HeroSection = () => {
                 height={40}
                 className={styles.icon}
               />
-            </a>
+            </a> */}
 
             {/* LinkedIn */}
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/masadnazir10/"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,10 +63,10 @@ const HeroSection = () => {
                 height={40}
                 className={styles.icon}
               />
-            </a>
+            </a> */}
 
             {/* GitHub */}
-            <a
+            {/* <a
               href="https://github.com/masadnazir1/"
               target="_blank"
               rel="noopener noreferrer"
@@ -77,10 +79,10 @@ const HeroSection = () => {
                 height={40}
                 className={styles.icon}
               />
-            </a>
+            </a> */}
 
             {/* WhatsApp */}
-            <a
+            {/* <a
               href="https://wa.me/+923208648637"
               target="_blank"
               rel="noopener noreferrer"
@@ -93,7 +95,7 @@ const HeroSection = () => {
                 height={40}
                 className={styles.icon}
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

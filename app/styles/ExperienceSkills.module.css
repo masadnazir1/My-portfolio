@@ -12,7 +12,7 @@
 
 /* Heading */
 .heading {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
   color: black;
   text-align: left;
@@ -30,7 +30,7 @@
 .skillsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 55px;
+  gap: 15px;
 
   justify-items: center;
 }
@@ -38,9 +38,13 @@
 /* Skill Card */
 .skillCard {
   margin: 10px;
-  width: 200px;
+  width: 100%;
   height: auto;
-  background-color: #fff;
+  background: linear-gradient(
+    135deg,
+    rgba(167, 170, 255, 0.64),
+    rgba(219, 153, 191, 0.489)
+  );
   /* background: rgba(255, 255, 255, 0.1); */
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;

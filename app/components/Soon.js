@@ -48,18 +48,11 @@ const Soon = () => {
               <h3>Track Your Wins</h3>
               <p>Earn points and track your progress after each match.</p>
             </div>
-            <div className={styles.step}>
-              <FaUserEdit className={styles.icon} />
-              <h3>Customize Your Profile</h3>
-              <p>
-                Change your username and personadivze your gaming experience.
-              </p>
-            </div>
           </div>
         </div>
 
         <div className={styles.techStack}>
-          <h2>Technologies Used:</h2>
+          <h2>Technologies Used</h2>
 
           <section className={styles.techbox}>
             <div className={styles.box}>
