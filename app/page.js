@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import HeroSection from "./components/HeroSection";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactUsForm from "./components/ContactUsForm";
@@ -12,7 +13,6 @@ import Header from "./components/Header";
 import styles from "./page.module.css";
 
 export default function Home() {
-  // Create refs for each section
   const heroRef = useRef(null);
   const experienceRef = useRef(null);
   const portfolioRef = useRef(null);
@@ -20,14 +20,21 @@ export default function Home() {
   const soonRef = useRef(null);
   const contactRef = useRef(null);
 
-  // Scroll to a section when called
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <div>
-      {/* Pass the scrollToSection function and refs to the header */}
       <Header
         onNavigate={(section) => {
           switch (section) {
@@ -54,29 +61,65 @@ export default function Home() {
           }
         }}
       />
-      <div ref={heroRef}>
+      <motion.div
+        ref={heroRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <HeroSection />
-      </div>
-      <div ref={experienceRef}>
+      </motion.div>
+      <motion.div
+        ref={experienceRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <div className={styles.divider}></div>
         <ExperienceSkills />
-      </div>
-      <div ref={portfolioRef}>
+      </motion.div>
+      <motion.div
+        ref={portfolioRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <div className={styles.divider}></div>
         <Portfolio />
-      </div>
-      <div ref={backendfolioRef}>
+      </motion.div>
+      <motion.div
+        ref={backendfolioRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <div className={styles.divider}></div>
         <Backendfolio />
-      </div>
-      <div ref={soonRef}>
+      </motion.div>
+      <motion.div
+        ref={soonRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <div className={styles.divider}></div>
         <Soon />
-      </div>
-      <div ref={contactRef}>
+      </motion.div>
+      <motion.div
+        ref={contactRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <div className={styles.divider}></div>
         <ContactUsForm />
-      </div>
+      </motion.div>
       <ScrollToTop />
     </div>
   );

@@ -70,7 +70,7 @@ body {
 
 /* Scrollbar Styling */
 body::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 2px; /* Width of the scrollbar */
 }
 
 body::-webkit-scrollbar-track {
