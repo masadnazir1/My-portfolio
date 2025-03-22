@@ -37,10 +37,6 @@ const HeroSection = () => {
             consulting—let’s build something great together!
           </p>
 
-          <a href="/Masad-Frontend-Developer.pdf" download>
-            <button className={styles.Download}>Download PDF</button>
-          </a>
-
           <button className={styles.Download} onClick={downloadPDF}>
             Download CV
           </button>
