@@ -1,13 +1,19 @@
 import styles from "../styles/HeroSection.module.css";
 import Image from "next/image";
 import asad from "../assets/asad.png";
-import fb from "../assets/facebook.png";
-import linkedin from "../assets/linkden.png";
-import github from "../assets/github.png";
-import whatsapp from "../assets/whatsapp.png";
 import laptop from "../assets/3d_project.png";
 
 const HeroSection = () => {
+  //
+  const downloadPDF = () => {
+    const link = document.createElement("a");
+    link.href = "../assets/Masad | Frontend Developer.pdf"; // Replace with the actual path
+    link.download = "Masad | Frontend Developer.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  //
   return (
     <div className={styles.heroSection}>
       <div className={styles.heroContainer}>
@@ -30,73 +36,11 @@ const HeroSection = () => {
             consulting—let’s build something great together!
           </p>
 
-          <button className={styles.Download}>Download CV</button>
+          <button className={styles.Download} onClick={downloadPDF}>
+            Download CV
+          </button>
 
-          <div className={styles.socialLinks}>
-            {/* Facebook */}
-            {/* <a
-              href="https://www.facebook.com/@masadnazir10"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcons}
-            >
-              <Image
-                src={fb}
-                alt="Facebook"
-                width={40}
-                height={40}
-                className={styles.icon}
-              />
-            </a> */}
-
-            {/* LinkedIn */}
-            {/* <a
-              href="https://www.linkedin.com/in/masadnazir10/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcons}
-            >
-              <Image
-                src={linkedin}
-                alt="LinkedIn"
-                width={40}
-                height={40}
-                className={styles.icon}
-              />
-            </a> */}
-
-            {/* GitHub */}
-            {/* <a
-              href="https://github.com/masadnazir1/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcons}
-            >
-              <Image
-                src={github}
-                alt="GitHub"
-                width={40}
-                height={40}
-                className={styles.icon}
-              />
-            </a> */}
-
-            {/* WhatsApp */}
-            {/* <a
-              href="https://wa.me/+923208648637"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialIcons}
-            >
-              <Image
-                src={whatsapp}
-                alt="WhatsApp"
-                width={40}
-                height={40}
-                className={styles.icon}
-              />
-            </a> */}
-          </div>
+          <div className={styles.socialLinks}></div>
         </div>
       </div>
 
