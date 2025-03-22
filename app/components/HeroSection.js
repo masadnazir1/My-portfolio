@@ -7,12 +7,13 @@ const HeroSection = () => {
   //
   const downloadPDF = () => {
     const link = document.createElement("a");
-    link.href = "../../public/Masad-Frontend-Developer.pdf"; // Replace with the actual path
+    link.href = "/Masad-Frontend-Developer.pdf"; // ✅ Correct path
     link.download = "Masad-Frontend-Developer.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+
   //
   return (
     <div className={styles.heroSection}>
@@ -36,9 +37,10 @@ const HeroSection = () => {
             consulting—let’s build something great together!
           </p>
 
-          <a href="../../public/Masad-Frontend-Developer.pdf" download>
+          <a href="/Masad-Frontend-Developer.pdf" download>
             <button className={styles.Download}>Download PDF</button>
           </a>
+
           <button className={styles.Download} onClick={downloadPDF}>
             Download CV
           </button>
