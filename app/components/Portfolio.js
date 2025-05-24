@@ -3,10 +3,20 @@ import gamenow from "../assets/projects/gamenow.png";
 import Image from "next/image";
 import quizapp from "../assets/projects/quizapp.png";
 import BlogBook from "../assets/projects/Blogbook.png";
+import hsfImage from "../assets/projects/Tour.png";
 
 const projects = [
   {
     id: 1,
+    title: "HSF Tourism Website",
+    image: hsfImage, // replace with your actual image import
+    description:
+      "A professional tourism website developed for HSF Company using modern web technologies. Features include tour listings, contact forms, and responsive design. Deployed at GalaxyDev.",
+    link: "https://hsf.galaxydev.pk/",
+  },
+
+  {
+    id: 2,
     title: "Gamig portal",
     description:
       "A react js based gamning portal prividing the verity of HTML5 games and download able games",
@@ -14,7 +24,7 @@ const projects = [
     link: "https://casual.gamenow.com.pk/",
   },
   {
-    id: 2,
+    id: 3,
     title: "React Quiz App",
     image: quizapp,
     description:
@@ -22,7 +32,7 @@ const projects = [
     link: "https://quiz.ntgarage.com/",
   },
   {
-    id: 3,
+    id: 4,
     title: "BlogBook",
     description:
       "A react js and Express js baed web and mobile app for posting, reading and sharing the blogs in a amazing way UI inspired by Facebook and instagram",
