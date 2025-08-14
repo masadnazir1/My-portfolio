@@ -1,74 +1,95 @@
 .portfolioSection {
-  padding: 50px;
-  background-color: #f1faee;
-  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  margin: 20px;
+  text-align: left;
+  border: 3px solid #ffffff44;
+}
+
+/* Heading */
+.headingWrapper {
+  margin-bottom: 40px;
 }
 
 .title {
-  text-align: left;
-
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #3c4409, #2019ea, #010605);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  text-align: left;
-  margin-bottom: 40px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards 0.2s;
 }
 
+/* Grid layout */
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-items: center;
 }
 
+/* Project Card */
 .projectCard {
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 10px;
   width: 100%;
-  height: auto;
-  background: linear-gradient(
-    135deg,
-    rgba(167, 170, 255, 0.64),
-    rgba(219, 153, 191, 0.489)
-  );
-  border: 4px solid #b7c7de;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.144);
-  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeInUp 0.6s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #ffdd00eb;
+  justify-content: space-between;
 }
 
 .projectCard:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffffff44;
+}
+
+/* Project Image */
+.imageWrapper {
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .projectImage {
   width: 100%;
   height: auto;
-  border-radius: 5px;
-  object-fit: inherit;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+}
+
+/* Project Info */
 .projectInfo {
-  text-align: left;
-  height: 220px;
-  margin-top: 10px;
-  width: 100%;
+  padding: 15px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  justify-content: flex-end;
-}
-
-.description {
-  text-align: left;
-  color: #1d3557;
-  font-size: 100%;
-  font-size: 15px;
 }
 
 .projectInfo h3 {
@@ -78,28 +99,49 @@
   color: #4e63c9;
 }
 
-.projectInfo a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  text-align: center;
-  font-weight: bold;
-  width: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(115, 105, 205, 0.963),
-    rgb(99, 255, 237)
-  );
+.description {
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+}
+
+.checkBtn {
+  display: inline-block;
   padding: 10px 30px;
-  margin: 20px 0;
+  font-weight: bold;
+  text-decoration: none;
   border-radius: 100px;
-  align-items: center;
-  justify-content: center;
-  &:hover {
-    background: linear-gradient(
-      135deg,
-      rgba(115, 105, 205, 0.963),
-      rgb(99, 255, 237)
-    );
+  background: linear-gradient(90deg, #ffd700, #ff63a6);
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.checkBtn:hover {
+  background: linear-gradient(90deg, #ffa200, #a81f5a);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
   }
 }

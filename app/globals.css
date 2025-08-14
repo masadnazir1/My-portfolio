@@ -1,54 +1,10 @@
 :root {
-  background-image: radial-gradient(
-      circle at 13% 47%,
-      rgba(140, 140, 140, 0.03) 0%,
-      rgba(140, 140, 140, 0.03) 25%,
-      transparent 25%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 28% 63%,
-      rgba(143, 143, 143, 0.03) 0%,
-      rgba(143, 143, 143, 0.03) 16%,
-      transparent 16%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 81% 56%,
-      rgba(65, 65, 65, 0.03) 0%,
-      rgba(65, 65, 65, 0.03) 12%,
-      transparent 12%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 26% 48%,
-      rgba(60, 60, 60, 0.03) 0%,
-      rgba(60, 60, 60, 0.03) 6%,
-      transparent 6%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 97% 17%,
-      rgba(150, 150, 150, 0.03) 0%,
-      rgba(150, 150, 150, 0.03) 56%,
-      transparent 56%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 50% 100%,
-      rgba(25, 25, 25, 0.03) 0%,
-      rgba(25, 25, 25, 0.03) 36%,
-      transparent 36%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 55% 52%,
-      rgba(69, 69, 69, 0.03) 0%,
-      rgba(69, 69, 69, 0.03) 6%,
-      transparent 6%,
-      transparent 100%
-    ),
-    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+  background: #f857a6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ff6ec4, #7873f5, #63ffed);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #63ffed);
+
 }
 
 html,
@@ -70,34 +26,43 @@ body {
 
 /* Scrollbar Styling */
 body::-webkit-scrollbar {
-  width: 2px; /* Width of the scrollbar */
+  width: 2px;
+  /* Width of the scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom, #fff, #fff); /* Track background */
-  border-radius: 10px; /* Rounded edges */
+  background: linear-gradient(to bottom, #fff, #fff);
+  /* Track background */
+  border-radius: 10px;
+  /* Rounded edges */
 }
 
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    45deg,
-    #457b9d,
-    #457b9d
-  ); /* Thumb with gradient */
-  border-radius: 6px; /* Rounded edges */
-  border: 0px solid #292929; /* Add border for a 3D effect */
+  background: linear-gradient(45deg,
+      #457b9d,
+      #457b9d);
+  /* Thumb with gradient */
+  border-radius: 6px;
+  /* Rounded edges */
+  border: 0px solid #292929;
+  /* Add border for a 3D effect */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #ff9c00, #e91e63); /* Hover effect */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Glow on hover */
+  background: linear-gradient(45deg, #ff9c00, #e91e63);
+  /* Hover effect */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /* Glow on hover */
 }
 
 body::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(45deg, #ff4d4d, #f9b30c); /* Active state */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Stronger glow when active */
+  background: linear-gradient(45deg, #ff4d4d, #f9b30c);
+  /* Active state */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  /* Stronger glow when active */
 }
 
 body::-webkit-scrollbar-corner {
-  background: #665656; /* Corner when both vertical and horizontal scrollbars are visible */
+  background: #665656;
+  /* Corner when both vertical and horizontal scrollbars are visible */
 }

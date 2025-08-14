@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
 import HeroSection from "./components/HeroSection";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactUsForm from "./components/ContactUsForm";
@@ -11,6 +10,7 @@ import Portfolio from "./components/Portfolio";
 import Backendfolio from "./components/Backendfolio";
 import Header from "./components/Header";
 import styles from "./page.module.css";
+import { useScrollAnimation } from "./Hooks/useScrollAnimation";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -20,17 +20,16 @@ export default function Home() {
   const soonRef = useRef(null);
   const contactRef = useRef(null);
 
+  // Apply scroll animations
+  useScrollAnimation(heroRef);
+  useScrollAnimation(experienceRef);
+  useScrollAnimation(portfolioRef);
+  useScrollAnimation(backendfolioRef);
+  useScrollAnimation(soonRef);
+  useScrollAnimation(contactRef);
+
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
   };
 
   return (
@@ -61,65 +60,37 @@ export default function Home() {
           }
         }}
       />
-      <motion.div
-        ref={heroRef}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+
+      {/* Sections with fade-in animation */}
+      <div ref={heroRef} className="fadeInUp">
         <HeroSection />
-      </motion.div>
-      <motion.div
-        ref={experienceRef}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      </div>
+
+      <div ref={experienceRef} className="fadeInUp">
         <div className={styles.divider}></div>
         <ExperienceSkills />
-      </motion.div>
-      <motion.div
-        ref={portfolioRef}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      </div>
+
+      <div ref={portfolioRef} className="fadeInUp">
         <div className={styles.divider}></div>
         <Portfolio />
-      </motion.div>
-      <motion.div
-        ref={backendfolioRef}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      </div>
+
+      <div ref={backendfolioRef} className="fadeInUp">
         <div className={styles.divider}></div>
         <Backendfolio />
-      </motion.div>
-      <motion.div
-        ref={soonRef}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      </div>
+
+      <div ref={soonRef} className="fadeInUp">
         <div className={styles.divider}></div>
         <Soon />
-      </motion.div>
-      <motion.div
-        ref={contactRef}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      </div>
+
+      <div ref={contactRef} className="fadeInUp">
         <div className={styles.divider}></div>
         <ContactUsForm />
-      </motion.div>
+      </div>
+
       <ScrollToTop />
     </div>
   );

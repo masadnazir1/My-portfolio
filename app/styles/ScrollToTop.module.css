@@ -2,29 +2,44 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: linear-gradient(
-    135deg,
-    rgba(115, 105, 205, 0.963),
-    rgb(99, 255, 237)
-  );
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background 0.3s ease-in-out, filter 0.3s ease-in-out;
+  z-index: 999;
+  animation: fadeInUp 0.5s ease forwards;
 }
 
 .scrollToTop:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, rgba(115, 105, 205, 0.8), rgb(99, 255, 237));
+  filter: drop-shadow(0 0 8px rgba(115, 105, 205, 0.7));
 }
 
 .scrollToTop img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   filter: invert(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

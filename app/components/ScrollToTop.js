@@ -10,11 +10,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -22,20 +18,17 @@ const ScrollToTop = () => {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div>
+    <>
       {isVisible && (
         <div className={styles.scrollToTop} onClick={scrollToTop}>
           <Image src={up} width={30} height={30} alt="Scroll to Top" />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

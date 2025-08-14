@@ -6,44 +6,47 @@ import Model from "./Model";
 
 const Backendfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  //
-  const openModal = () => setIsModalOpen(true);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
   const closeModal = () => setIsModalOpen(false);
-  //
 
   const backendProjects = [
     {
       title: "BlogBook Backend",
       description:
-        "A fully functional backend built with Node.js and Express for BlogBook to create, post, delete blogs, and manage the user profile section, such as uploading pictures, changing the cover photo, and updating names and other details. It also allows users to share posts, comment on posts, convert pictures to binary, and decode them into image URLs. PostgreSQL is used for the database, with Node.js and Express as the framework.",
-      techStack: ["Node.js", "Express", "Postgresql"],
+        "A fully functional backend built with Node.js and Express for BlogBook to create, post, delete blogs, and manage user profiles with image uploads, cover photos, and more. PostgreSQL is used as the database.",
+      techStack: ["Node.js", "Express", "PostgreSQL"],
       link: "https://github.com/yourusername/e-commerce-api",
     },
     {
-      title: "Tic-tack-toe Backend",
+      title: "Tic-Tac-Toe Backend",
       description:
-        "A backend for my upcoming project, Tic-Tac-Toe. This application handles all operations for a real online Tic-Tac-Toe game, including user registration, user login, game creation, live gameplay with real online players, updating scores accordingly, and profile updates.",
+        "Handles all operations for a real online Tic-Tac-Toe game including registration, login, game creation, live gameplay, scoring, and profile updates.",
       techStack: ["Node.js", "Express", "MySQL"],
       link: "https://github.com/yourusername/blog-backend",
     },
     {
-      title: "Email sending api",
+      title: "Email Sending API",
       description:
-        "A fully functional API for sending emails, such as OTPs, order information, and other similar automations, built using the Express.js framework and hosted on Vercel. It uses Gmail SMTP for sending the emails.",
+        "API for sending automated emails like OTPs or order info using Gmail SMTP, built on Express.js and hosted on Vercel.",
       techStack: ["Node.js", "Gmail", "Express"],
       link: "https://github.com/yourusername/sms-marketing-app",
     },
     {
-      title: "Daily stats Automation",
+      title: "Daily Stats Automation",
       description:
-        "An Express.js and Node.js automation script to read yesterday's data from the database, calculate it, and send the stats via email to the team daily at 8 AM. I have used Node Cron for scheduling the task, and PostgreSQL is used for the database.",
-      techStack: ["Node.js", "Express", "Postgresql"],
+        "Automation script to read data, calculate stats, and send emails daily at 8 AM using Node Cron and PostgreSQL.",
+      techStack: ["Node.js", "Express", "PostgreSQL"],
       link: "https://github.com/yourusername/weather-forecast-api",
     },
     {
       title: "Browser Automation",
       description:
-        "A Node.js script that logs into websites to perform actions, such as unsubscribing a user from a service. I have developed this application to automate daily tasks and save time. It uses Node.js and Puppeteer for browser automation.",
+        "Node.js script using Puppeteer to automate daily tasks on websites like unsubscribing users or interacting with web elements.",
       techStack: ["Node.js", "Express", "Puppeteer"],
       link: "https://github.com/yourusername/weather-forecast-api",
     },
@@ -51,40 +54,46 @@ const Backendfolio = () => {
 
   return (
     <section className={styles.backendfolio}>
-      <h1 className={styles.title}>My Backend Projects</h1>
-
-      <p className={styles.subtitle}>
-        Here are some backend applications I have built, each demonstrating
-        different functionality and technologies.
-      </p>
+      <div className={styles.headerWrapper}>
+        <h2 className={styles.title}>Backend Projects</h2>
+        <p className={styles.subtitle}>
+          Some of my backend work with modern tech stack and automation scripts
+        </p>
+      </div>
 
       <div className={styles.projects}>
         {backendProjects.map((project, index) => (
-          <div className={styles.projectCard} key={index}>
-            <div className={styles.clipath}>
-              <h3 className={styles.projectTitle}>{project.title}</h3>
+          <div
+            className={styles.projectCard}
+            key={index}
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <div className={styles.projectHeader}>
+              <h3>{project.title}</h3>
             </div>
             <p className={styles.projectDescription}>{project.description}</p>
             <div className={styles.techStack}>
               {project.techStack.map((tech, idx) => (
-                <span className={styles.techItem} key={idx}>
+                <span key={idx} className={styles.techItem}>
                   {tech}
                 </span>
               ))}
             </div>
-            <a
-              onClick={openModal}
-              // href={project.link}
+            {/* <button
               className={styles.projectLink}
-              // target="_blank"
-              // rel="noopener noreferrer"
+              onClick={() => openModal(project)}
             >
               View Code
-            </a>
+            </button> */}
           </div>
         ))}
       </div>
-      <Model isOpen={isModalOpen} closeModal={closeModal} />
+
+      <Model
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+        project={selectedProject}
+      />
     </section>
   );
 };

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import styles from "../styles/ExperienceSkills.module.css";
 import Image from "next/image";
 import HHTML from "../assets/HTML.png";
@@ -15,33 +17,39 @@ import linux from "../assets/linux.png";
 const skills = [
   { id: 1, name: "HTML", icon: HHTML },
   { id: 2, name: "CSS", icon: CSS },
-  { id: 3, name: "React native", icon: native },
+  { id: 3, name: "React Native", icon: native },
   { id: 4, name: "JavaScript", icon: js },
   { id: 5, name: "React", icon: react },
   { id: 6, name: "GitHub", icon: github },
-  { id: 7, name: "Wordpress", icon: wordpress },
-  { id: 8, name: "git", icon: git },
-  { id: 10, name: "Express Js", icon: expressjs },
-  //linux
-  { id: 12, name: "Linux ", icon: linux },
+  { id: 7, name: "WordPress", icon: wordpress },
+  { id: 8, name: "Git", icon: git },
+  { id: 10, name: "Express.js", icon: expressjs },
+  { id: 12, name: "Linux", icon: linux },
 ];
 
 const ExperienceSkills = () => {
   return (
     <section className={styles.experienceSection}>
-      <h2 className={styles.heading}>Experience / Skills</h2>
-      <p className={styles.subheading}>
-        These are the technologies I have worked with
-      </p>
+      <div className={styles.headingWrapper}>
+        <h2 className={styles.heading}>Experience & Skills</h2>
+        <p className={styles.subheading}>
+          Technologies I work with to build modern web apps
+        </p>
+      </div>
+
       <div className={styles.skillsGrid}>
-        {skills.map((skill) => (
-          <div key={skill.id} className={styles.skillCard}>
+        {skills.map((skill, index) => (
+          <div
+            key={skill.id}
+            className={styles.skillCard}
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
             <Image
               src={skill.icon}
               alt={skill.name}
               className={styles.icon}
-              width={30}
-              height={30}
+              width={60}
+              height={60}
             />
             <p className={styles.skillName}>{skill.name}</p>
           </div>

@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../styles/ContactUsForm.module.css";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import toast styles
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const ContactUsForm = () => {
@@ -19,14 +19,13 @@ const ContactUsForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default behavior first
+    e.preventDefault();
 
-    if (name === "" || email === "" || message === "") {
-      toast.error("Please fill all the details to contact us");
+    if (!name || !email || !message) {
+      toast.error("Please fill all the details");
       return;
     }
 
-    // Basic email format validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       toast.error("Please enter a valid email address");
@@ -44,25 +43,22 @@ const ContactUsForm = () => {
 
       setLoading(false);
       clear();
-      toast.success("The email was sent successfully!", {
-        position: "bottom-left",
-      });
+      toast.success("Email sent successfully!", { position: "bottom-left" });
     } catch (error) {
       setLoading(false);
-      console.error("Error sending email:", error);
-      toast.error(
-        "An error occurred while sending the email. Please try again."
-      );
+      toast.error("Error sending email. Try again!");
     }
   };
 
   return (
-    <div className={styles.contactFormSection}>
+    <section className={styles.contactFormSection}>
       <ToastContainer />
       <div className={styles.textheading}>
-        <h2 className={styles.heading}>Contact Us</h2>
+        <h2 className={styles.heading}>
+          Contact <span className={styles.gradientText}>Us</span>
+        </h2>
         <p className={styles.paragraph}>
-          We would love to hear from you! Please fill out the form below.
+          We&apos;d love to hear from you! Fill out the form below.
         </p>
       </div>
       <div className={styles.boxinternal}>
@@ -116,14 +112,14 @@ const ContactUsForm = () => {
             <button
               type="submit"
               className={styles.submitButton}
-              disabled={loading} // Disable button while loading
+              disabled={loading}
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
