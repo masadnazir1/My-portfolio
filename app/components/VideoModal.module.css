@@ -18,8 +18,7 @@
 
 /* Video styling */
 .videoPlayer {
-    width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 20px;
     transition: transform 0.3s ease;
