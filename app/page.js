@@ -10,7 +10,6 @@ import Portfolio from "./components/Portfolio";
 import Backendfolio from "./components/Backendfolio";
 import Header from "./components/Header";
 import styles from "./page.module.css";
-import { useScrollAnimation } from "./Hooks/useScrollAnimation";
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -19,14 +18,6 @@ export default function Home() {
   const backendfolioRef = useRef(null);
   const soonRef = useRef(null);
   const contactRef = useRef(null);
-
-  // Apply scroll animations
-  useScrollAnimation(heroRef);
-  useScrollAnimation(experienceRef);
-  useScrollAnimation(portfolioRef);
-  useScrollAnimation(backendfolioRef);
-  useScrollAnimation(soonRef);
-  useScrollAnimation(contactRef);
 
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
