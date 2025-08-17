@@ -21,7 +21,7 @@ const projects = [
     id: 2,
     title: "Gaming Portal",
     description:
-      "A React.js based gaming portal providing a variety of HTML5 games and downloadable games.",
+      "A React.js based gaming portal providing a variety of HTML5 games and downloadable games deployed with Jazz pakistan.",
     image: gamenow,
     link: "https://casual.gamenow.com.pk/",
   },
@@ -35,11 +35,11 @@ const projects = [
   },
   {
     id: 4,
-    title: "BlogBook",
+    title: "Snappit",
     description:
-      "A React.js and Express.js based web/mobile app for posting, reading, and sharing blogs with an amazing UI inspired by social media.",
+      "Get summarized emails instantly via SMS and manage them in a simple web dashboard.",
     image: BlogBook,
-    link: "https://dblob.digihut.store/",
+    link: "https://snappit.galaxydev.pk/",
   },
 ];
 

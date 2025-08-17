@@ -11,8 +11,8 @@ const HeroSection = () => {
 
   const downloadPDF = () => {
     const link = document.createElement("a");
-    link.href = "/Masad-Frontend-Developer.pdf";
-    link.download = "Masad-Frontend-Developer.pdf";
+    link.href = "/M_Asad_Web_developer.pdf";
+    link.download = "/M_Asad_Web_developer.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
