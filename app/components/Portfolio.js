@@ -7,6 +7,7 @@ import gamenow from "../assets/projects/gamenow.png";
 import quizapp from "../assets/projects/quizapp.png";
 import BlogBook from "../assets/projects/Blogbook.png";
 import hsfImage from "../assets/projects/Tour.png";
+import Olearn from "../assets/projects/Olearn.png";
 
 const projects = [
   {
@@ -40,6 +41,14 @@ const projects = [
       "Get summarized emails instantly via SMS and manage them in a simple web dashboard.",
     image: BlogBook,
     link: "https://snappit.galaxydev.pk/",
+  },
+  {
+    id: 5,
+    title: "Olearn",
+    description:
+      "Discover courses with ease, filter by category, price, or duration, and enjoy a seamless learning experience with a modern, mobile-friendly design.",
+    image: Olearn,
+    link: "https://Olearn.galaxydev.pk/",
   },
 ];
 

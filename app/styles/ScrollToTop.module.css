@@ -5,7 +5,7 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, #ffd700, #ff63a6);
   backdrop-filter: blur(15px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   display: flex;
@@ -21,7 +21,7 @@
 .scrollToTop:hover {
   transform: scale(1.15) rotate(10deg);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
-  background: linear-gradient(135deg, rgba(115, 105, 205, 0.8), rgb(99, 255, 237));
+  background: linear-gradient(90deg, #ffd500, #de3e83);
   filter: drop-shadow(0 0 8px rgba(115, 105, 205, 0.7));
 }
 
